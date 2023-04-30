@@ -5,15 +5,17 @@ class Program
     static void Main(string[] args)
     {
         Random randomGenerator = new Random();
-        int magicNumber = randomGenerator.Next(1, 101);
+        int magicNumber = randomGenerator.Next(1, 100);
 
-        int guess = -1;
+        int guess = 2;
+        int numberOfGuesses = 0;
 
         // use a do-while loop here...
         while (guess != magicNumber)
         {
             Console.Write("What is your guess? ");
             guess = int.Parse(Console.ReadLine());
+            numberOfGuesses++;
 
             if (magicNumber > guess)
             {
@@ -25,8 +27,11 @@ class Program
             }
             else
             {
-                Console.WriteLine("You guessed it!");
-            }
+                Console.WriteLine("Congratulations, You guessed it! Number of gusses is " + numberOfGuesses );
+                 
+            } 
+        
+            
         }   
     }
 }

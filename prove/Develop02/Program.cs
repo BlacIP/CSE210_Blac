@@ -1,5 +1,15 @@
 using System;
 
+//Exceeding the Requirements:
+
+//In addition to the core requirements, the following features were implemented to enhance the program:
+
+//Random prompts: The program generates a random prompt for each new entry, providing users with varied prompts for their journaling.
+//File management: The program allows users to save and load journal entries from different files, providing flexibility in managing multiple journal files.
+//Error handling: The program includes error handling to handle invalid user inputs and provide appropriate feedback and instructions.
+//Separation of concerns: The program utilizes separate classes for different functionalities, promoting code organization, reusability, and maintainability.
+
+
 public class Program
 {
     private static Journal journal = new Journal();

@@ -9,7 +9,7 @@ public class Journal
 
     public Journal()
     {
-        // Initialize the prompts list with pre-written prompts
+        // Display existing prompts list to help users
         prompts.Add("Who was the most interesting person I interacted with today?");
         prompts.Add("What was the best part of my day?");
         prompts.Add("How did I see the hand of the Lord in my life today?");

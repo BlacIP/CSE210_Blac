@@ -5,10 +5,12 @@ using System.Threading;
 public abstract class Activity
 {
     protected int duration; // Duration of the activity in seconds
+    protected string userName; // User's name
 
-    public Activity(int duration)
+    public Activity(int duration, string userName)
     {
         this.duration = duration;
+        this.userName = userName;
     }
 
     // Method to display the starting message
@@ -16,6 +18,7 @@ public abstract class Activity
     {
         Console.WriteLine($"--- {activityName} ---");
         Console.WriteLine(description);
+        Console.WriteLine($"Welcome, {userName}!");
         Console.WriteLine("Get ready to begin...");DisplayPauseAnimation();
         Thread.Sleep(1500); // Pause for 1seconds 500 milliseconds
     }
@@ -23,7 +26,7 @@ public abstract class Activity
     // Method to display the ending message
     protected virtual void DisplayEndingMessage(string activityName)
     {
-        Console.WriteLine("Good job!");
+        Console.WriteLine($"Good job!, {userName}");
         Console.WriteLine($"You have completed the {activityName} activity in {duration} seconds");
         Thread.Sleep(3000); // Pause for 3 seconds
     }

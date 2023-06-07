@@ -23,7 +23,7 @@ public class ReflectionActivity : Activity
         "How can you keep this experience in mind in the future?"
     };
 
-    public ReflectionActivity(int duration) : base(duration)
+    public ReflectionActivity(int duration, string userName) : base(duration, userName)
     {
     }
 

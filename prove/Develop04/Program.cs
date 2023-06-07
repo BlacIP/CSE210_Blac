@@ -5,11 +5,14 @@ class Program
 {
     public static void Main(string[] args)
     {
+        Console.WriteLine("Welcome to the Mindfulness Program");
+        Console.Write("Enter your username: ");
+        string userName = Console.ReadLine();
         bool exit = false;
 
         while (!exit)
         {
-            Console.WriteLine("Mindfulness Program");
+            Console.WriteLine("Please choose an activity from Mindfulness Program");
             Console.WriteLine("1. Breathing Activity");
             Console.WriteLine("2. Reflection Activity");
             Console.WriteLine("3. Listing Activity");
@@ -34,13 +37,13 @@ class Program
                 switch (choice)
                 {
                     case 1:
-                        activity = new BreathingActivity(duration);
+                        activity = new BreathingActivity(duration, userName);
                         break;
                     case 2:
-                        activity = new ReflectionActivity(duration);
+                        activity = new ReflectionActivity(duration, userName);
                         break;
                     case 3:
-                        activity = new ListingActivity(duration);
+                        activity = new ListingActivity(duration, userName);
                         break;
                     default:
                         Console.WriteLine("Invalid choice!");

@@ -12,7 +12,7 @@ public class ListingActivity : Activity
         "Who are some of your personal heroes?"
     };
 
-    public ListingActivity(int duration) : base(duration)
+    public ListingActivity(int duration, string userName) : base(duration, userName)
     {
     }
 

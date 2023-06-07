@@ -3,7 +3,7 @@ using System;
 // Derived class for breathing activity
 public class BreathingActivity : Activity
 {
-    public BreathingActivity(int duration) : base(duration)
+    public BreathingActivity(int duration, string userName) : base(duration, userName)
     {
     }
 
